@@ -1,6 +1,7 @@
 import './App.scss';
 import Footer from './components/footer';
 import Home from './components/home';
+import ListProduct from './components/listProduct';
 import NavBar from './components/nav';
 import Container from 'react-bootstrap/Container';
 
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <NavBar />
       <Container>
-        <Home></Home>
+        {/* <Home></Home> */}
+        <ListProduct></ListProduct>
       </Container>
       <Footer />
     </div>

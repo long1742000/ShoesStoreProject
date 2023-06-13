@@ -8,12 +8,12 @@ const Home = () => {
     // let image = require(`../assets/images/${listData[0].images[0].name}`)
     console.log(listData);
     return (
-        <>
+        <div className="home-content">
             <div className="slide">
                 <Carousel>
-                    {listSilde.map(item => {
+                    {listSilde.map((item, index) => {
                         return (
-                            <Carousel.Item>
+                            <Carousel.Item key={index}>
                                 <img
                                     className="d-block w-100"
                                     src={require(`../assets/images/${item.name}`)}
@@ -25,9 +25,9 @@ const Home = () => {
                 </Carousel>
             </div>
             <br />
-            <div className="row">
+            <div className="row mb-3">
                 <div className="col-6">
-                    <h2>New products</h2>
+                    <p className="new">New Products</p>
                 </div>
                 <div className="col-6">
                     <button className="btn btn-primary more">More</button>
@@ -36,63 +36,68 @@ const Home = () => {
 
             <div className="recomend">
                 <div className="row">
-                    <div className="col-4 recomend-item">
+                    <div className="col-sm-4 col-12 recomend-item mb-2">
                         <Card>
-                            <Card.Body>
+                            <Card.Body className="cardBody">
                                 <div className="row">
-                                    <div className="col-6 img-item">
+                                    <div className="col-lg-6 col-12 img-item">
                                         <img src={require(`../assets/images/${listData[0].images[0].name}`)}></img>
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-12">
                                         <p><strong>{listData[0].name}</strong></p>
                                         <p>Brand: {listData[0].brand}</p>
                                         <p>Price: {listData[0].price} $</p>
-                                        <button className="btn btn-danger">Add to cart</button>
                                     </div>
                                 </div>
                             </Card.Body>
+                            <Card.Footer>
+                                <button className="btn btn-danger addToCart">Add to cart</button>
+                            </Card.Footer>
                         </Card>
                     </div>
 
-                    <div className="col-4 recomend-item">
+                    <div className="col-sm-4 col-12 recomend-item mb-2">
                         <Card>
                             <Card.Body>
                                 <div className="row">
-                                    <div className="col-6 img-item">
+                                    <div className="col-lg-6 col-12 img-item">
                                         <img src={require(`../assets/images/${listData[3].images[0].name}`)}></img>
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-12">
                                         <p><strong>{listData[3].name}</strong></p>
                                         <p>Brand: {listData[3].brand}</p>
                                         <p>Price: {listData[3].price} $</p>
-                                        <button className="btn btn-danger">Add to cart</button>
                                     </div>
                                 </div>
                             </Card.Body>
+                            <Card.Footer>
+                                <button className="btn btn-danger addToCart">Add to cart</button>
+                            </Card.Footer>
                         </Card>
                     </div>
 
-                    <div className="col-4 recomend-item">
+                    <div className="col-sm-4 col-12 recomend-item mb-2">
                         <Card>
                             <Card.Body>
                                 <div className="row">
-                                    <div className="col-6 img-item">
+                                    <div className="col-lg-6 col-12 img-item">
                                         <img src={require(`../assets/images/${listData[6].images[0].name}`)}></img>
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-lg-6 col-12">
                                         <p><strong>{listData[6].name}</strong></p>
                                         <p>Brand: {listData[6].brand}</p>
                                         <p>Price: {listData[6].price} $</p>
-                                        <button className="btn btn-danger">Add to cart</button>
                                     </div>
                                 </div>
                             </Card.Body>
+                            <Card.Footer>
+                                <button className="btn btn-danger addToCart">Add to cart</button>
+                            </Card.Footer>
                         </Card>
                     </div>
-
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

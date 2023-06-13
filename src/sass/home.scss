@@ -1,19 +1,35 @@
-.slide {
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
+.home-content {
+    .slide {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
 
-.more {
-    float: right;
-}
+    .more {
+        float: right;
+    }
 
-.recomend-item {
-    padding: 0 5px;
+    .recomend-item {
 
-    .img-item {
-        img {
-            width: 100%;
+        .img-item {
+            img {
+                width: 100%;
+            }
         }
+    }
+
+    .addToCart {
+        float: right;
+    }
+
+    .new {
+        font-weight: 600;
+        font-size: 100%;
+    }
+}
+
+.navBar {
+    .nav-item {
+        text-align: center;
     }
 }
 
@@ -21,4 +37,79 @@
     width: 100%;
     height: 30px;
     background-color: grey;
+}
+
+.list-product {
+    .name-page {
+        font-size: 100%;
+        font-weight: 600;
+    }
+
+    .search {
+        position: relative;
+
+        .icon-search {
+            color: grey;
+            position: absolute;
+            right: 25px;
+            top: 5px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .icon-search:hover {
+            color: black;
+        }
+    }
+
+    .filter {
+        .filter-seperate {
+            height: 25px;
+            background-color: grey;
+            justify-content: center;
+            font-weight: 500;
+            color: white;
+        }
+
+        .btn-filter {
+            float: right;
+            cursor: pointer;
+        }
+
+        .filter-item {
+            height: 30px;
+            border-radius: 20px;
+            background-color: #d3d3d3c9;
+            cursor: pointer;
+        }
+
+        .filter-item:hover {
+            background-color: #D3D3D3;
+        }
+    }
+
+    .product-item {
+        img {
+            width: 100%;
+        }
+
+        .detail {
+            min-height: 150px;
+        }
+
+        .addToCart {
+            float: right;
+        }
+    }
+
+    .more {
+        cursor: pointer;
+        text-align: center;
+        background-color: #d3d3d3c9;
+        transition: 0.2s;
+    }
+
+    .more:hover {
+        background-color: #D3D3D3;
+    }
 }

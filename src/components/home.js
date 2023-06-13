@@ -3,6 +3,7 @@ import '../sass/home.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
     // let image = require(`../assets/images/${listData[0].images[0].name}`)
@@ -30,7 +31,9 @@ const Home = () => {
                     <p className="new">New Products</p>
                 </div>
                 <div className="col-6">
-                    <button className="btn btn-primary more">More</button>
+                    <NavLink to="/products">
+                        <button className="btn btn-primary more">More</button>
+                    </NavLink>
                 </div>
             </div>
 
@@ -46,7 +49,7 @@ const Home = () => {
                                     <div className="col-lg-6 col-12">
                                         <p><strong>{listData[0].name}</strong></p>
                                         <p>Brand: {listData[0].brand}</p>
-                                        <p>Price: {listData[0].price} $</p>
+                                        <p>Price: ${listData[0].price}</p>
                                     </div>
                                 </div>
                             </Card.Body>

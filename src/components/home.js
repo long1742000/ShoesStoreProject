@@ -1,12 +1,14 @@
 import { listData, listSilde } from "../store/data";
 import '../sass/home.scss';
 import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from "react-router-dom";
 
-const Home = () => {
+const Home = (props) => {
     // let image = require(`../assets/images/${listData[0].images[0].name}`)
+
+    const add = props.add;
+
     console.log(listData);
     return (
         <div className="home-content">
@@ -18,7 +20,7 @@ const Home = () => {
                                 <img
                                     className="d-block w-100"
                                     src={require(`../assets/images/${item.name}`)}
-                                    alt="Slide"
+                                    alt="Loading image..."
                                 />
                             </Carousel.Item>
                         )
@@ -44,7 +46,7 @@ const Home = () => {
                             <Card.Body className="cardBody">
                                 <div className="row">
                                     <div className="col-lg-6 col-12 img-item">
-                                        <img src={require(`../assets/images/${listData[0].images[0].name}`)}></img>
+                                        <img src={require(`../assets/images/${listData[0].images[0].name}`)} alt="Loading image..."></img>
                                     </div>
                                     <div className="col-lg-6 col-12">
                                         <p><strong>{listData[0].name}</strong></p>
@@ -54,7 +56,7 @@ const Home = () => {
                                 </div>
                             </Card.Body>
                             <Card.Footer>
-                                <button className="btn btn-danger addToCart">Add to cart</button>
+                                <button className="btn btn-danger addToCart" onClick={() => { add(listData[0], 1) }}>Add to cart</button>
                             </Card.Footer>
                         </Card>
                     </div>
@@ -64,7 +66,7 @@ const Home = () => {
                             <Card.Body>
                                 <div className="row">
                                     <div className="col-lg-6 col-12 img-item">
-                                        <img src={require(`../assets/images/${listData[3].images[0].name}`)}></img>
+                                        <img src={require(`../assets/images/${listData[3].images[0].name}`)} alt="Loading image..."></img>
                                     </div>
                                     <div className="col-lg-6 col-12">
                                         <p><strong>{listData[3].name}</strong></p>
@@ -74,7 +76,7 @@ const Home = () => {
                                 </div>
                             </Card.Body>
                             <Card.Footer>
-                                <button className="btn btn-danger addToCart">Add to cart</button>
+                                <button className="btn btn-danger addToCart" onClick={() => { add(listData[3], 1) }}>Add to cart</button>
                             </Card.Footer>
                         </Card>
                     </div>
@@ -84,7 +86,7 @@ const Home = () => {
                             <Card.Body>
                                 <div className="row">
                                     <div className="col-lg-6 col-12 img-item">
-                                        <img src={require(`../assets/images/${listData[6].images[0].name}`)}></img>
+                                        <img src={require(`../assets/images/${listData[6].images[0].name}`)} alt="Loading image..."></img>
                                     </div>
                                     <div className="col-lg-6 col-12">
                                         <p><strong>{listData[6].name}</strong></p>
@@ -94,7 +96,7 @@ const Home = () => {
                                 </div>
                             </Card.Body>
                             <Card.Footer>
-                                <button className="btn btn-danger addToCart">Add to cart</button>
+                                <button className="btn btn-danger addToCart" onClick={() => { add(listData[6], 1) }}>Add to cart</button>
                             </Card.Footer>
                         </Card>
                     </div>

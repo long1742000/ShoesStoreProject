@@ -211,6 +211,37 @@ body {
         .btn-buy {
             width: 100%;
         }
+
+        .update-quantity {
+            border: none;
+            width: 25px;
+            border-radius: 3px;
+            background-color: #778899;
+            color: white;
+            transition: 0.25s;
+        }
+
+        .update-quantity:hover {
+            background-color: #77889984;
+        }
+
+        .quantity {
+            margin-right: 2px;
+            margin-left: 2px;
+        }
+
+        .delete {
+            border: none;
+            width: 25px;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            transition: 0.25s;
+        }
+
+        .delete:hover {
+            background-color: rgb(247, 109, 109);
+        }
     }
 
 }

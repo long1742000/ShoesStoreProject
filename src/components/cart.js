@@ -4,18 +4,54 @@ import { NavLink } from "react-router-dom";
 
 const Cart = () => {
 
-    const [list, setList] = useState([]);
+    const [list, setList] = useState(JSON.parse(localStorage.getItem('cart')));
     const [subtotal, setSubtotal] = useState(0);
 
     useEffect(() => {
-        const clone = JSON.parse(localStorage.getItem('cart'));
         let sum = 0;
-        for (let i = 0; i < clone.length; i++) {
-            sum = sum + (clone[i].quantity * clone[i].price);
+        for (let i = 0; i < list.length; i++) {
+            sum = sum + (list[i].quantity * list[i].price);
         }
         setSubtotal(sum);
-        setList(clone);
     }, [])
+
+    const updateQuantity = (item, type) => {
+        let clone = list;
+        let sum = 0;
+
+        for (let i = 0; i < clone.length; i++) {
+            if (item.id === clone[i].id) {
+                if (type === 'cong') {
+                    clone[i].quantity = item.quantity + 1;
+                    for (let i = 0; i < list.length; i++) {
+                        sum = sum + (list[i].quantity * list[i].price);
+                    }
+                    setSubtotal(sum);
+                }
+                else if (type === 'tru') {
+                    clone[i].quantity = item.quantity - 1;
+
+                    for (let i = 0; i < list.length; i++) {
+                        sum = sum + (list[i].quantity * list[i].price);
+                    }
+                    setSubtotal(sum);
+                }
+            }
+        }
+        setList([...clone]);
+        localStorage.setItem('cart', JSON.stringify(list));
+    }
+
+    const deleteItem = (item) => {
+        let clone = list;
+        let sum = 0;
+        for (let i = 0; i < list.length; i++) {
+            clone = clone.filter(index => index.id !== item.id);
+            sum = sum + (list[i].quantity * list[i].price);
+        }
+        setSubtotal(sum);
+        setList([...clone]);
+    }
 
     return (
         <>
@@ -52,9 +88,10 @@ const Cart = () => {
                                             <td className="product-name item">{item.name}</td>
                                             <td className="product-price item">${item.price}</td>
                                             <td className="product-quantity item">
-                                                <span>+ </span>
-                                                <input type="text" readOnly value={item.quantity}></input>
-                                                <span> -</span>
+                                                <button className="update-quantity" onClick={item.quantity < 10 ? () => { updateQuantity(item, 'cong') } : () => { }}>+</button>
+                                                <input className="quantity" type="text" readOnly value={item.quantity}></input>
+                                                <button hidden={item.quantity == 1 ? true : false} className="update-quantity" onClick={item.quantity > 1 ? () => { updateQuantity(item, 'tru') } : () => { }}>-</button>
+                                                <button hidden={item.quantity > 1 ? true : false} className="delete" onClick={() => deleteItem(item)}>x</button>
                                             </td>
                                             <td className="product-total item">${item.price * item.quantity}</td>
                                         </tr>
@@ -72,7 +109,16 @@ const Cart = () => {
                                     <td className="product-name"></td>
                                     <td className="product-price"></td>
                                     <td colSpan={2} className="product-quantity">
-                                        <Button class="btn btn-danger btn-buy">Buy</Button>
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="product-img"></td>
+                                    <td className="product-name"></td>
+                                    <td className="product-price"></td>
+                                    <td></td>
+                                    <td className="product-quantity">
+                                        <Button className="btn btn-danger btn-buy">Buy</Button>
                                     </td>
                                 </tr>
                             </tbody>

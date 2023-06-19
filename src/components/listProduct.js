@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { listData } from "../store/data"
+import { NavLink } from "react-router-dom";
 
 import Card from 'react-bootstrap/Card';
 
@@ -147,7 +148,7 @@ const ListProduct = (props) => {
                                                         <img src={require(`../assets/images/${item.images[0].name}`)} alt="Loading image..."></img>
                                                     </div>
                                                     <div className="col-lg-12 col-12 detail">
-                                                        <p><strong>{item.name}</strong></p>
+                                                        <NavLink to={`/detail/${item.id}`}><strong>{item.name}</strong></NavLink>
                                                         <p>Brand: {item.brand}</p>
                                                         <p>Price: {item.price} $</p>
                                                     </div>

@@ -51,6 +51,7 @@ const Cart = () => {
         }
         setSubtotal(sum);
         setList([...clone]);
+        localStorage.setItem('cart', JSON.stringify([...clone]));
     }
 
     return (

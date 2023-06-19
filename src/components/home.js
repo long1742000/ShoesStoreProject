@@ -49,7 +49,7 @@ const Home = (props) => {
                                         <img src={require(`../assets/images/${listData[0].images[0].name}`)} alt="Loading image..."></img>
                                     </div>
                                     <div className="col-lg-6 col-12">
-                                        <p><strong>{listData[0].name}</strong></p>
+                                        <NavLink to={`/detail/${listData[0].id}`}><strong>{listData[0].name}</strong></NavLink>
                                         <p>Brand: {listData[0].brand}</p>
                                         <p>Price: ${listData[0].price}</p>
                                     </div>
@@ -69,7 +69,7 @@ const Home = (props) => {
                                         <img src={require(`../assets/images/${listData[3].images[0].name}`)} alt="Loading image..."></img>
                                     </div>
                                     <div className="col-lg-6 col-12">
-                                        <p><strong>{listData[3].name}</strong></p>
+                                        <NavLink to={`/detail/${listData[3].id}`}><strong>{listData[3].name}</strong></NavLink>
                                         <p>Brand: {listData[3].brand}</p>
                                         <p>Price: {listData[3].price} $</p>
                                     </div>
@@ -89,7 +89,7 @@ const Home = (props) => {
                                         <img src={require(`../assets/images/${listData[6].images[0].name}`)} alt="Loading image..."></img>
                                     </div>
                                     <div className="col-lg-6 col-12">
-                                        <p><strong>{listData[6].name}</strong></p>
+                                        <NavLink to={`/detail/${listData[6].id}`}><strong>{listData[6].name}</strong></NavLink>
                                         <p>Brand: {listData[6].brand}</p>
                                         <p>Price: {listData[6].price} $</p>
                                     </div>

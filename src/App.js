@@ -11,6 +11,7 @@ import {
 import Cart from './components/cart';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import Detail from './components/detail';
 
 function App() {
   localStorage.setItem('cart', JSON.stringify([]));
@@ -43,11 +44,11 @@ function App() {
       addItem = [...clone];
     }
     else {
-      addItem = [...clone, { id: item.id, name: item.name, image: item.images[0], price: item.price, quantity: 1 }];
+      addItem = [...clone, { id: item.id, name: item.name, image: item.images[0], price: item.price, quantity: quantity }];
     }
     localStorage.setItem('cart', JSON.stringify(addItem));
     console.log(addItem);
-    toast.success('+1')
+    toast.success(`+${quantity}`)
   }
 
   return (
@@ -58,6 +59,7 @@ function App() {
           <Route path="/" element={<Home add={addToCart} />} />
           <Route path="/products" element={<ListProduct add={addToCart} />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/detail/:id" element={<Detail add={addToCart} />} />
         </Routes>
       </Container>
       <ToastContainer

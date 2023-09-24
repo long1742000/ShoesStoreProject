@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/https//long1742000.github.io/ShoesStoreProject/static/css/main.08d9ee52.css",
-    "main.js": "/https//long1742000.github.io/ShoesStoreProject/static/js/main.7cbcbabb.js",
+    "main.js": "/https//long1742000.github.io/ShoesStoreProject/static/js/main.0346e8db.js",
     "static/js/787.28cb0dcd.chunk.js": "/https//long1742000.github.io/ShoesStoreProject/static/js/787.28cb0dcd.chunk.js",
     "static/media/slide2.jpg": "/https//long1742000.github.io/ShoesStoreProject/static/media/slide2.3156f424dd522df0d8a8.jpg",
     "static/media/slide1.jpg": "/https//long1742000.github.io/ShoesStoreProject/static/media/slide1.69aa161412ee7aff1ffb.jpg",
@@ -33,11 +33,11 @@
     "static/media/vans2-2.jpg": "/https//long1742000.github.io/ShoesStoreProject/static/media/vans2-2.d072b7161aa5152a208b.jpg",
     "index.html": "/https//long1742000.github.io/ShoesStoreProject/index.html",
     "main.08d9ee52.css.map": "/https//long1742000.github.io/ShoesStoreProject/static/css/main.08d9ee52.css.map",
-    "main.7cbcbabb.js.map": "/https//long1742000.github.io/ShoesStoreProject/static/js/main.7cbcbabb.js.map",
+    "main.0346e8db.js.map": "/https//long1742000.github.io/ShoesStoreProject/static/js/main.0346e8db.js.map",
     "787.28cb0dcd.chunk.js.map": "/https//long1742000.github.io/ShoesStoreProject/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08d9ee52.css",
-    "static/js/main.7cbcbabb.js"
+    "static/js/main.0346e8db.js"
   ]
 }

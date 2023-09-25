@@ -8,7 +8,7 @@ const NavBar = () => {
         <>
             <Navbar bg="light" expand="lg" className='navBar'>
                 <Container>
-                    <NavLink to="/" className='navbar-brand'>Shoes Store</NavLink>
+                    <NavLink to="/" className='navbar-brand'><img className='logo' src={require(`../assets/images/logo/logo.png`)}></img> Shoes Store</NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">

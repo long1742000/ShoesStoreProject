@@ -37,6 +37,12 @@ body {
     }
 
     .navBar {
+        .navbar-brand {
+            img {
+                width: 70px;
+            }
+        }
+
         .nav-item {
             text-align: center;
         }

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ShoesStoreProject/static/css/main.08d9ee52.css",
-    "main.js": "/ShoesStoreProject/static/js/main.7e12bafc.js",
+    "main.css": "/ShoesStoreProject/static/css/main.fefe81dd.css",
+    "main.js": "/ShoesStoreProject/static/js/main.1956e406.js",
     "static/js/787.28cb0dcd.chunk.js": "/ShoesStoreProject/static/js/787.28cb0dcd.chunk.js",
     "static/media/slide2.jpg": "/ShoesStoreProject/static/media/slide2.3156f424dd522df0d8a8.jpg",
     "static/media/slide1.jpg": "/ShoesStoreProject/static/media/slide1.69aa161412ee7aff1ffb.jpg",
@@ -32,12 +32,12 @@
     "static/media/vans2-1.jpg": "/ShoesStoreProject/static/media/vans2-1.a3210b23d22ea64e5d61.jpg",
     "static/media/vans2-2.jpg": "/ShoesStoreProject/static/media/vans2-2.d072b7161aa5152a208b.jpg",
     "index.html": "/ShoesStoreProject/index.html",
-    "main.08d9ee52.css.map": "/ShoesStoreProject/static/css/main.08d9ee52.css.map",
-    "main.7e12bafc.js.map": "/ShoesStoreProject/static/js/main.7e12bafc.js.map",
+    "main.fefe81dd.css.map": "/ShoesStoreProject/static/css/main.fefe81dd.css.map",
+    "main.1956e406.js.map": "/ShoesStoreProject/static/js/main.1956e406.js.map",
     "787.28cb0dcd.chunk.js.map": "/ShoesStoreProject/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08d9ee52.css",
-    "static/js/main.7e12bafc.js"
+    "static/css/main.fefe81dd.css",
+    "static/js/main.1956e406.js"
   ]
 }
